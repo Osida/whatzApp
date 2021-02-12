@@ -9,5 +9,18 @@ const firebaseConfig = {
   messagingSenderId: process.env.REACT_APP_FIREBASE_MESSAGING_SENDER_ID,
   appId: process.env.REACT_APP_FIREBASE_APP_ID,
 };
+
 // Initialize Firebase
-firebase.initializeApp(firebaseConfig);
+const firebaseApp = firebase.initializeApp(firebaseConfig);
+
+// Access the firestore instance of the app (basically connects to the db)
+const db = firebaseApp.firestore();
+
+// Responsible for setting up the authentication
+const auth = firebaseApp.auth();
+
+// Google authentication
+const provider = new firebase.auth.GoogleAuthProvider();
+
+export { auth, provider };
+export default db;
