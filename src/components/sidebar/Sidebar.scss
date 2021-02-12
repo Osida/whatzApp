@@ -1,0 +1,59 @@
+@use "../../scss/icons";
+
+.sidebar {
+  display: flex;
+  flex-direction: column;
+  flex: 0.35;
+
+  &__header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1.25em;
+    border-right: 1px solid lightgray;
+
+    &--right {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      min-width: 10vw;
+
+      .MuiSvgIcon-root {
+        margin-right: 0.3vw;
+        font-size: 1.5rem !important;
+      }
+    }
+  }
+
+  &__search {
+    display: flex;
+    align-items: center;
+    background-color: #f6f6f6;
+    height: 49px;
+    padding: 0.625em;
+
+    &--container {
+      display: flex;
+      align-items: center;
+      background-color: white;
+      width: 100%;
+      height: 35px;
+      border-radius: 20px;
+
+      input {
+        border: none;
+        margin-left: 0.625em;
+      }
+
+      .MuiSvgIcon-root {
+        @include icons.icon-gray-color;
+      }
+    }
+  }
+
+  &__chatRooms {
+    flex: 1;
+    overflow: scroll;
+    background-color: white;
+  }
+}

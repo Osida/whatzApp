@@ -8,7 +8,6 @@ This project was is a clone of the desktop version of the popular messenger app 
 - React JS
     - react-router-dom
     - React Context API
-    - Redux
 - Firebase Cloud Firestore
     - Google Authentication
 
