@@ -3,11 +3,12 @@ import "./Sidebar.scss";
 
 export default function Sidebar() {
   return (
-    <div className="Sidebar">
-      <h1>Sidebar</h1>
-      {/* Header */}
-      {/* Search bar */}
-      {/* recent chat messages */}
-    </div>
+    <section className="sidebar">
+      <div className="sidebar__header"></div>
+
+      <div className="sidebar__search"></div>
+
+      <div className="sidebar__chatRooms"></div>
+    </section>
   );
 }
